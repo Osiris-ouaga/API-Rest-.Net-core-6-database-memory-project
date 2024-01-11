@@ -12,7 +12,7 @@ namespace Api.Bibiliotheque.Core.Net.Filters
             _logger = logger;
         }
 
-        //Se déclenche sur chaque exception de nos controllers
+        // Triggers on each exception from our controllers
         public void OnException(ExceptionContext context)
         {
             _logger.LogError(context.Exception.Message);

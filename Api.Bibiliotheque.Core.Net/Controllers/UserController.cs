@@ -1,7 +1,5 @@
 ﻿using Api.Bibiliotheque.Core.Net.Interfaces;
 using Api.Bibiliotheque.Core.Net.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Bibiliotheque.Core.Net.Controllers
@@ -23,19 +21,19 @@ namespace Api.Bibiliotheque.Core.Net.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Models.UserModel>>> Get(CancellationToken cancel)
         {
-            _logger.LogWarning("DEBUT DE LONGUE ATTENTE");
+            _logger.LogWarning("BEGINNING OF LONG WAIT");
 
-            // simule une attente longue de 10 secondes
+            // Simulates a long wait of 10 seconds
             //for (int i = 0; i < 10; i++)
             //{
-            //    _logger.LogWarning($"JE PASSE POUR LE {i}");
+            //    _logger.LogWarning($"I'M PASSING FOR {i}");
             //    cancel.ThrowIfCancellationRequested();
             //    Thread.Sleep(1000);
             //}
 
-            //await Task.Delay(10000,cancel);//simule une attente longue de 10 secondes
+            //await Task.Delay(10000, cancel); // Simulates a long wait of 10 seconds
             var result = await _service.GetUsers(cancel);
-            _logger.LogWarning("FIN DE LONGUE ATTENTE");
+            _logger.LogWarning("END OF LONG WAIT");
             return Ok(result);
         }
 
@@ -66,7 +64,5 @@ namespace Api.Bibiliotheque.Core.Net.Controllers
             var result = await _service.DeleteUser(id);
             return Ok(result);
         }
-
-
     }
 }

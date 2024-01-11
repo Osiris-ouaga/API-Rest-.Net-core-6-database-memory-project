@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fvU64DdEIr60CkXPEdVP8QaclonglMoUsCYdh5vjCxuWmqeJUpHQznvxbc6VuqYT49nejYrbJ8729Rsp+vKvog==",
+  "dgSpecHash": "jX+hs5PzlIig2DLE53t7+29bx5v+x9T8i0tHENYkkLGCLisupQM2/6mHeMt0Nmvch33hvmf+YY5o46L7tYyxxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\princ\\source\\repos\\Api.Bibliotheque.Net.Core\\Api.Bibiliotheque.Core.Net\\Api.Bibiliotheque.Core.Net.csproj",
+  "projectFilePath": "C:\\Users\\princ\\OneDrive\\Documents\\C# repository\\API-Rest-.Net-core-6-database-memory-project\\Api.Bibiliotheque.Core.Net\\Api.Bibiliotheque.Core.Net.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\princ\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.1\\microsoft.aspnetcore.authentication.jwtbearer.6.0.1.nupkg.sha512",
     "C:\\Users\\princ\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

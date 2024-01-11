@@ -1,0 +1,39 @@
+2024-01-11 12:52:45.458 +01:00 [INF] User profile is available. Using 'C:\Users\princ\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-11 12:52:48.386 +01:00 [INF] Now listening on: https://localhost:7019
+2024-01-11 12:52:48.443 +01:00 [INF] Now listening on: http://localhost:5019
+2024-01-11 12:52:48.446 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-11 12:52:48.448 +01:00 [INF] Hosting environment: Development
+2024-01-11 12:52:48.450 +01:00 [INF] Content root path: C:\Users\princ\OneDrive\Documents\C# repository\API-Rest-.Net-core-6-database-memory-project\Api.Bibiliotheque.Core.Net\
+2024-01-11 12:52:50.259 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7019/swagger/index.html - -
+2024-01-11 12:52:51.757 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7019/swagger/index.html - - - 200 - text/html;charset=utf-8 1511.2273ms
+2024-01-11 12:52:51.851 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7019/_framework/aspnetcore-browser-refresh.js - -
+2024-01-11 12:52:51.855 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7019/_vs/browserLink - -
+2024-01-11 12:52:51.904 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7019/_framework/aspnetcore-browser-refresh.js - - - 200 12384 application/javascript;+charset=utf-8 52.6054ms
+2024-01-11 12:52:52.193 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7019/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 338.2719ms
+2024-01-11 12:52:52.395 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7019/swagger/v1/swagger.json - -
+2024-01-11 12:52:52.915 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7019/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 519.4371ms
+2024-01-11 13:03:58.303 +01:00 [INF] User profile is available. Using 'C:\Users\princ\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-11 13:03:58.922 +01:00 [INF] Now listening on: https://localhost:7019
+2024-01-11 13:03:58.925 +01:00 [INF] Now listening on: http://localhost:5019
+2024-01-11 13:03:58.927 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-11 13:03:58.929 +01:00 [INF] Hosting environment: Development
+2024-01-11 13:03:58.931 +01:00 [INF] Content root path: C:\Users\princ\OneDrive\Documents\C# repository\API-Rest-.Net-core-6-database-memory-project\Api.Bibiliotheque.Core.Net\
+2024-01-11 13:03:59.841 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7019/swagger/index.html - -
+2024-01-11 13:04:00.816 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7019/swagger/index.html - - - 200 - text/html;charset=utf-8 982.8665ms
+2024-01-11 13:04:00.893 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7019/_framework/aspnetcore-browser-refresh.js - -
+2024-01-11 13:04:00.893 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7019/_vs/browserLink - -
+2024-01-11 13:04:00.934 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7019/_framework/aspnetcore-browser-refresh.js - - - 200 12384 application/javascript;+charset=utf-8 40.8331ms
+2024-01-11 13:04:00.978 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7019/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 84.8222ms
+2024-01-11 13:04:01.274 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7019/swagger/v1/swagger.json - -
+2024-01-11 13:04:01.686 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7019/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 411.7238ms
+2024-01-11 13:59:17.174 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7019/api/maroute/Book/monget/mongetget - -
+2024-01-11 13:59:17.347 +01:00 [INF] Executing endpoint 'Api.Bibiliotheque.Core.Net.Controllers.BookController.Get (Api.Bibiliotheque.Core.Net)'
+2024-01-11 13:59:17.381 +01:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Api.Bibiliotheque.Core.Net.Models.BookModel]]] Get() on controller Api.Bibiliotheque.Core.Net.Controllers.BookController (Api.Bibiliotheque.Core.Net).
+2024-01-11 13:59:17.397 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-01-11 13:59:17.400 +01:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2024-01-11 13:59:17.408 +01:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2024-01-11 13:59:17.426 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-01-11 13:59:17.436 +01:00 [INF] Executed action Api.Bibiliotheque.Core.Net.Controllers.BookController.Get (Api.Bibiliotheque.Core.Net) in 43.7777ms
+2024-01-11 13:59:17.448 +01:00 [INF] Executed endpoint 'Api.Bibiliotheque.Core.Net.Controllers.BookController.Get (Api.Bibiliotheque.Core.Net)'
+2024-01-11 13:59:17.452 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7019/api/maroute/Book/monget/mongetget - - - 401 0 - 279.2140ms

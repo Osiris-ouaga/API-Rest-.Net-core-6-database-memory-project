@@ -12,16 +12,16 @@ namespace Api.Bibiliotheque.Core.Net.Filters
             _logger = logger;
         }
 
-        //Après l'action on exécute cette partie
+        // After the action, execute this part
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            _logger.LogWarning($"Log de fin de l'appel API: {context.ActionDescriptor.DisplayName} à {DateTime.Now}");
+            _logger.LogWarning($"End of API call log: {context.ActionDescriptor.DisplayName} at {DateTime.Now}");
         }
 
-        //Avant l'action on exécute cette partie
+        // Before the action, execute this part
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            _logger.LogWarning($"Log de l'appel API: {context.ActionDescriptor.DisplayName} à {DateTime.Now}");
+            _logger.LogWarning($"API call log: {context.ActionDescriptor.DisplayName} at {DateTime.Now}");
         }
     }
 }

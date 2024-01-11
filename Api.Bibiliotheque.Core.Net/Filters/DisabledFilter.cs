@@ -5,22 +5,22 @@ namespace Api.Bibiliotheque.Core.Net.Filters
 {
     public class DisabledFilter : Attribute, IResourceFilter
     {
-        //S'exécute après l'appel de la méthode
+        // Executes after the method is called
         public void OnResourceExecuted(ResourceExecutedContext context)
         {
-            
+
         }
 
-        //S'exécute avant l'appel de la méthode
+        // Executes before the method is called
         public void OnResourceExecuting(ResourceExecutingContext context)
         {
-            //Si la route contient certain chemin alors on avertit l'utilisateur qu'elle n'est plus disponible
+            // If the route contains a certain path, notify the user that it is no longer available
             if (context.HttpContext.Request.Path.Value.Contains("maroute"))
             {
                 context.Result = new BadRequestObjectResult(
                     new
                     {
-                        result = new[] { "Cette méthode n'est plus disponible" }
+                        result = new[] { "This method is no longer available" }
                     });
             }
         }

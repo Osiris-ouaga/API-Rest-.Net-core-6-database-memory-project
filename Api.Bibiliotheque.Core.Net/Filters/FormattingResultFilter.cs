@@ -8,19 +8,20 @@ namespace Api.Bibiliotheque.Core.Net.Filters
     {
         public async Task OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next)
         {
-            //Permet de formatter la sortie du résultat ou autres ...
-            if(!(context.Result is EmptyResult))
+            // Formats the output of the result or performs other actions...
+            if (!(context.Result is EmptyResult))
             {
                 var item = context.Result as ObjectResult;
                 context.Result = new JsonResult(new HttpResult<object>()
                 {
-                    StatutCode = item.StatusCode,
-                    IsSuccess = (item.StatusCode == 200 || item.StatusCode == 201) ? true : false,
-                    Data = item.Value
+                    StatutCode = item!.StatusCode,
+                    IsSuccess = (item.StatusCode == 200 || item.StatusCode == 201),
+                    Data = item.Value!
                 });
             }
 
             var resultContext = await next();
         }
     }
+
 }

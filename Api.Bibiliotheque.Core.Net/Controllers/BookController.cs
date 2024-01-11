@@ -8,9 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Bibiliotheque.Core.Net.Controllers
 {
     
-    //[controller] = Book
-    //[action] = action de la méthode
-    //mot clé réservé : area, handler, page, ...(d'autres avec blazor)
     [Route("api/maroute/[controller]")]
     [Produces("application/json")]
     [DisabledFilter]
@@ -19,34 +16,30 @@ namespace Api.Bibiliotheque.Core.Net.Controllers
     {
 
         private readonly IBookService _service;
-        //private readonly ILogger<BookController> _logger;
 
-        public BookController(IBookService service/*, ILogger<BookController> logger*/)
+        public BookController(IBookService service)
         {
             _service = service;
-            //_logger = logger;
         }
 
         /// <summary>
-        /// Permet d'obtenir la liste des livres de la bibliothèques
+        /// Obtains the list of books from the library.
         /// </summary>
         /// <remarks>
-        /// Example de requête :
-        /// POST /monget/mongetge {avec in id = "id, et une valeur = "valeur", ...}
+        /// Example of a request:
+        /// POST /monget/mongetge {with in id = "id", and a value = "value", ...}
         /// </remarks>
-        /// <response code="400">Erreur pour trouver la requete</response>
-        /// <response code="200">Une liste de books</response>
-        /// <response code="401">Authentification necessaire</response>
-        /// <returns>Return a list of books</returns>
+        /// <response code="400">Error finding the request</response>
+        /// <response code="200">A list of books</response>
+        /// <response code="401">Authentication required</response>
+        /// <returns>Returns a list of books</returns>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]        
         [HttpGet("monget/mongetget")]        
         public async Task<ActionResult<List<Models.BookModel>>> Get()
         {
-            //_logger.LogError("APPEL DE L'api GET");
             var result = await _service.GetBooks();
-            //_logger.LogWarning("Warning : fin de l'appel");
             return Ok(result);
         }
 
@@ -77,7 +70,5 @@ namespace Api.Bibiliotheque.Core.Net.Controllers
             var result = await _service.DeleteBook(id);
             return Ok(result);
         }
-
-
     }
 }

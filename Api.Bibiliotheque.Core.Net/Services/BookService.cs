@@ -42,7 +42,7 @@ namespace Api.Bibiliotheque.Core.Net.Services
         {
             if (book.Id != id)
             {
-                _logger.LogError("Le livre que vous voulez modifier n'est pas correct");
+                _logger.LogError("The book you want to modify is not correct.");
                 return null;
             }
 
@@ -54,7 +54,7 @@ namespace Api.Bibiliotheque.Core.Net.Services
             await _context.SaveChangesAsync();
             _context.Entry(book).State = EntityState.Detached;
 
-            _logger.LogWarning($"Enregistrement modifié avec succès : {book.Title}");
+            _logger.LogWarning($"Record successfully modified : {book.Title}");
 
             return book;
         }

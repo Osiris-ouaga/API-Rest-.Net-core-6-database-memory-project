@@ -18,31 +18,26 @@ namespace Api.Bibiliotheque.Core.Net.Configuration
                 options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Mon Api Bibliothèque",
-                    Description = "Api de gestion de bibliothèque pour mes clients.",
-                    TermsOfService = new Uri("https://monapibiblio/terms"),
+                    Title = "My Library API",
+                    Description = "Library management API for my clients.",
+                    TermsOfService = new Uri("https://mylibraryapi/terms"),
                     Contact = new Microsoft.OpenApi.Models.OpenApiContact
                     {
-                        Name = "Auteur1",
-                        Email ="helloauteur@udemy.com",
-                        Url = new Uri("mailto:helloauteur@udemy.com")
+                        Name = "Prince Divin MACKPAYEN",
+                        Email = "divinmackpayen@gmail.com",
+                        Url = new Uri("mailto:divinmackpayen@gmail.com")
                     },
                     License = new Microsoft.OpenApi.Models.OpenApiLicense
                     {
-                        Name ="Example licence",
-                        Url = new Uri("https://monapibiblio/licences")
+                        Name = "Example License",
+                        Url = new Uri("https://mylibraryapi/licenses")
                     }
                 });
 
-
-                //lecture du fichier xml pour swagger
-                //var xmlhelp = Assembly.GetExecutingAssembly().GetName()+xml
-                var xmlhelp = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlhelp));
-
+                // Read the XML file for Swagger
+                var xmlHelp = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlHelp));
             });
-
-            
 
             return service;
         }
