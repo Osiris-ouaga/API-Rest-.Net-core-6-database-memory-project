@@ -1,5 +1,7 @@
 # API Rest .Net core 6 database memory project
 Bibliothèque API
+![image](https://github.com/Osiris-ouaga/API-Rest-.Net-core-6-database-memory-project/assets/54855716/0ec06143-f57e-426b-a641-10f3ae52154d)
+![image](https://github.com/Osiris-ouaga/API-Rest-.Net-core-6-database-memory-project/assets/54855716/58452a60-1c4a-4660-ad3f-607818a162db)
 Bibliothèque API is a .NET Core-based web API for managing users and books in a library system. The API provides endpoints for retrieving, adding, updating, and deleting user and book information. It is designed to be a robust backend for a library management system.
 
 Table of Contents
